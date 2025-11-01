@@ -1,18 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Game from "./components/Game/Game.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <h1 className="text-4xl font-bold text-indigo-600 text-center">
-          Hello Tailwind 🎉
-      </h1>
+      <Game />
     </>
   )
 }
-
-export default App

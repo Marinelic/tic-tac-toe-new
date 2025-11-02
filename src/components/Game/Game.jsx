@@ -21,25 +21,23 @@ export default function Game() {
 
 
     return (
-        <main className="bg-green-500 min-h-screen grid place-items-center p-6">
-            <div className="">
-                <h1 className="">
+        <main className="bg-green-200 min-h-screen grid place-items-center p-6">
+            <div className="w-full max-w-sm">
+                <h1 className="text-3xl font-bold text-center mb-4 text-green-900">
                     TIC-TAC-TOE
                 </h1>
 
-                <p className="">
+                <p className="text-center text-gray-700 mb-4">
                     {status}
                 </p>
 
                 {/* <Board /> */}
+                    {/* <Board squares={squares} onPlay={handleClick} /> */}
 
-                <div className="">
+                <div className="mt-6 flex justify-center">
                     <button
-                        onClick={() => {
-                            setSquares(Array(0).fill(null));
-                            setXIsNext(true);
-                        }}
-                        className=""
+                        /* onClick={handleReset} */
+                        className="px-4 py-2 bg-yellow-400 rounded-lg text-white font-medium shadow hover:bg-yellow-500 focus:outline-none focus:ring-1 focus:ring-green-900"
                     >
                         Reset
                     </button>

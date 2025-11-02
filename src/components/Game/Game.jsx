@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import Board from "./Board.jsx";
+import Board from "./Board.jsx";
 
 export default function Game() {
     // React memory for squares and whose turn it is
@@ -17,6 +17,11 @@ export default function Game() {
         setXIsNext(!xIsNext);
     }
 
+        function handleReset() {
+        setSquares(Array(9).fill(null));
+        setXIsNext(true);
+    }
+
     const status = xIsNext ? "X to move" : "O to move";
 
 
@@ -32,11 +37,11 @@ export default function Game() {
                 </p>
 
                 {/* <Board /> */}
-                    {/* <Board squares={squares} onPlay={handleClick} /> */}
+                    <Board squares={squares} onPlay={handleClick} />
 
                 <div className="mt-6 flex justify-center">
                     <button
-                        /* onClick={handleReset} */
+                        onClick={handleReset}
                         className="px-4 py-2 bg-yellow-400 rounded-lg text-white font-medium shadow hover:bg-yellow-500 focus:outline-none focus:ring-1 focus:ring-green-900"
                     >
                         Reset
